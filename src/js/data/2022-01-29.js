@@ -26,7 +26,7 @@ dataSet[dataSetVersion].options = [
       { name: "Duck", key: "dk" },
       { name: "Dew Planeter", key: "dew" },
       { name: "Object", key: "obj" },
-      { name: "Creatures", tooltip: "Non-objects basically.", key: "st5" },
+      { name: "Creatures", tooltip: "Non-objects basically.", key: "cr" },
     ]
   },
   {
@@ -39,7 +39,7 @@ dataSet[dataSetVersion].options = [
 
 dataSet[dataSetVersion].characterData = [
   {
-    name: "Hakurei Reimu",
+    name: "7_Segment Display",
     img: "c5DqpgX.png",
     opts: {
       series: ["book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "MoF", "SWR", "SA", "UFO", "Soku", "DS", "TD", "HM", "DDC", "ISC", "ULiL", "LoLK"],
