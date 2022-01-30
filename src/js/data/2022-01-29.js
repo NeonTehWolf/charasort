@@ -9,11 +9,11 @@ dataSet[dataSetVersion].options = [
     checked: false,
     sub: [
       { name: "Kerfuffle For A Neat Prize", key: "kfanp" },
-      { name: "Duck Clash", tooltip: ".", key: "duck1" },
-      { name: "Duck Clash DX", tooltip: ".", key: "duck2" },
-      { name: "BFAMOOS", tooltip: ".", key: "bf" },
-      { name: "Battle For Oat Isle", tooltip: ".", key: "bfoi" },
-      { name: "The Mildud Super Show", tooltip: "TMSS", key: "TMSS" },
+      { name: "Duck Clash", tooltip: "First season of Duck Clash", key: "duck1" },
+      { name: "Duck Clash DX", tooltip: "Second season of Duck Clash", key: "duck2" },
+      { name: "BFAMOOS", tooltip: "Old show", key: "bf" },
+      { name: "Battle For Oat Isle", tooltip: "REALLY old show", key: "bfoi" },
+      { name: "The Mildud Super Show", tooltip: "", key: "TMSS" },
     ]
   },
   {
@@ -40,48 +40,50 @@ dataSet[dataSetVersion].options = [
 dataSet[dataSetVersion].characterData = [
   {
     name: "7_Segment Display",
-    img: "c5DqpgX.png",
+    img: "7-Segment Display.png",
     opts: {
-      series: ["book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "MoF", "SWR", "SA", "UFO", "Soku", "DS", "TD", "HM", "DDC", "ISC", "ULiL", "LoLK"],
-      stage: ["st4"]
+      series: [],
+      stage: ["obj"]
     }
   },
   {
-    name: "Kirisame Marisa",
-    img: "tJnkSzK.png",
+    name: "8 Bit Duck",
+    img: "8-Bit Duck.png",
     opts: {
-      series: ["book", "EoSD", "PCB", "IaMP", "IN", "PoFV", "StB", "MoF", "SWR", "SA", "UFO", "Soku", "DS", "GFW", "TD", "HM", "DDC", "ISC", "ULiL", "LoLK"],
-      stage: ["st4", "ex"]
+      series: ["duck1", "duck2"],
+      stage: ["dk"]
     }
   },
   {
-    name: "Rumia",
-    img: "0YT7QlS.png",
-    opts: { series: ["book", "EoSD", "StB", "HM"], stage: ["st1"] }
+    name: "16-Bit Duck",
+    img: "16-Bit Duck.png",
+     opts: {
+      series: ["duck1", "duck2"],
+      stage: ["dk"]
   },
   {
-    name: "Daiyousei",
-    img: "NWlZud3.png",
-    opts: { series: ["book", "EoSD"], stage: ["st2", "ex"] }
+    name: "Almond",
+    img: "Almond.png",
+    opts: { series: [], stage: ["book"] }
   },
   {
-    name: "Cirno",
-    img: "qdveFSy.png",
+    name: "Amazok Jr",
+    img: "Amazok Jr.png",
     opts: {
-      series: [ "book", "EoSD", "PCB", "PoFV", "StB", "Soku", "GFW", "HM", "DDC", "ISC"
+      series: [ "kfanp"
       ],
       stage: ["st2"]
     }
   },
   {
-    name: "Hong Meiling",
-    img: "ptGp0x4.png",
-    opts: { series: ["book", "EoSD", "IaMP", "StB", "Soku"], stage: ["st3"] }
+    name: "Amazok",
+    img: "Amazok.pngg",
+    opts: { series: ["kfanp"], stage: ["obj"] }
   },
   {
-    name: "Koakuma",
-    img: "vBKdDm4.png",
-    opts: { series: ["book", "EoSD"], stage: ["st4"] }
+    name: "Amber",
+    img: "Amber.png",
+    opts: { series: [], stage: ["book"] }
   },
   {
     name: "Patchouli Knowledge",
