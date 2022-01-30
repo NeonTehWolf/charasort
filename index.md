@@ -1,37 +1,99 @@
-## Welcome to GitHub Pages
+<html>
 
-You can use the [editor on GitHub](https://github.com/NeonTehWolf/charasort/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+  <link rel="shortcut icon" href="src/assets/yinyang.ico" type="image/x-icon">
+  <link rel="icon" href="src/assets/yinyang.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="og:site_name" content="Touhou Character Sorting">
+  <meta name="og:description" content="A simple website for sorting Touhou characters in a formatted list.">
+  <meta name="og:image" content="https://i.imgur.com/IZzJMk6.jpg">
+  <title>Touhou Character Sorting</title>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <link rel="stylesheet" type="text/css" href="src/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
 
-### Markdown
+  <script src="src/js/data.js"></script>
+  <script src="src/js/data/2017-05-01.js"></script>
+  <script src="src/js/data/2018-02-20.js"></script>
+  <script src="src/js/data/2018-03-01.js"></script>
+  <script src="src/js/data/2019-06-07.js"></script>
+  <script src="src/js/data/2019-10-04.js"></script>
+  <script src="src/js/data/2019-10-05.js"></script>
+  <script src="src/js/data/2019-11-26.js"></script>
+  <script src="src/js/data/2021-03-29.js"></script>
+  <script src="src/js/data/2021-05-09.js"></script>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  <script src="src/js/html2canvas.min.js"></script>
+  <script src="src/js/lz-string.min.js"></script>
+  <script src="src/js/seedrandom.min.js"></script>
+  <script src="src/js/main.js"></script>
+</head>
 
-```markdown
-Syntax highlighted code block
+<body>
+<div class="container">
 
-# Header 1
-## Header 2
-### Header 3
+    <div class="progress">
+        <span class="progressbattle"></span>
+        <div class="progressbar">
+            <div class="progressfill"><span class="progresstext"></span></div>
+        </div>
+    </div>
 
-- Bulleted
-- List
+    <div class="sorter">
+        <img src="src/assets/defaultL.jpg" class="left sort image">
 
-1. Numbered
-2. List
+        <div class="starting start button">Touhou Project Character Sorter<br><br>Click to Start!</div>
+        <div class="starting load button">Load <span></span></div>
 
-**Bold** and _Italic_ and `Code` text
+        <div class="loading button"><div></div><span>Loading...</span></div>
 
-[Link](url) and ![Image](src)
-```
+        <div class="sorting tie button">Tie</div>
+        <div class="sorting undo button">Undo</div>
+        <div class="sorting save button">Save Progress</div>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+        <div class="finished save button">Generate Result URL</div>
+        <div class="finished getimg button">Generate Image</div>
+        <div class="finished list button">Generate Text List</div>
 
-### Jekyll Themes
+        <img src="src/assets/defaultR.jpg" class="right sort image">
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/NeonTehWolf/charasort/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+        <div class="left sort text"><p></p></div>
+        <div class="right sort text"><p></p></div>
+    </div>
 
-### Support or Contact
+    <div class="options"></div>
+    <div class="image selector">Display Images on Result: </div>
+    <div class="time taken"></div>
+    <div class="results"></div>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    <div class="info">
+        <a href="https://relick.me/song/">Song Sorter</a> | <a href="mailto:fera@imouto.my">Contact</a> | <a href="https://github.com/execfera/charasort/">Source Code</a> | <a href="?IwVmE4CZNAGSBs5YB8QA5zAMzoCwqzCxEmnDGVkkUXVHEON1lW0tPOn1s9suNyTGr3Y0G3QcN4SBQunNaCxC+pPLsuqreNob5MylKOtuk5RoWGlenhM63TInfyNSRS-aKuaDV+7bKjrJ8wbpClhyu1BZ6bnKG8R5m5kHOHly6gariITE2vvyRxpocZtqW8moxpZ7GGbmlmbGilZXe6j75CSGtLnbAhAxAA">Best Taste</a> | <a class="clearsave">Clear Save Data</a>
+        
+        <br><br>
+
+        <p>Sorter for Touhou characters. Pick your sources, and hit the Start button.</p>
+        <p><strong>Certain options have details that you can hover to read.</strong></p>
+        <p>Click on the character you like better from the two, or tie them if you like them equally or don't know them.</p>
+        <p>Depending on how many sources you pick, you'll get up to 700+ picks, so set aside a good few cups of tea for this.</p>
+
+        <br><br>
+
+        <p>Keyboard controls during sorting: H/LeftArrow (pick left) J/DownArrow (undo) K/UpArrow (tie) L/RightArrow (pick right) S (save progress).</p>
+        <p>Before sorting: S/Enter (start sorting) L (load progress).
+        <p>1/2/3 always correspond to the first/second/third buttons.</p>
+        
+        <br><br>
+
+        <p>Inspired by <a href="http://mainyan.sakura.ne.jp/thsort.html">this site</a>. Thumbnail Art: <a href="http://www.tasofro.net/">alphes</a>, <a href="http://www.pixiv.net/member.php?id=743845">kaoru</a>, <a href="http://www.pixiv.net/member.php?id=4920496">dairi</a>. Splash Art: <a href="http://kahluamilk.la.coocan.jp/illust/2004/056_hyakkiyakou.jpg">toto nemigi</a>.</p>
+
+        <br><br>
+
+        <p>May 9th, 2021 - Added Unconnected Marketeers (full).</p>
+        <p>March 29th, 2021 - Added Unconnected Marketeers (trial).</p>
+        <p>October 5th, 2019 - Added filter for nameless characters.</p>
+        <p>October 4th, 2019 - Added Wily Beast and Weakest Creature (full).</p>
+    </div>
+</div>
+</body>
+
+</html>
